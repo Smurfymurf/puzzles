@@ -191,3 +191,6 @@ rbbrun: command not found: x12b (1..5-word topic vocab, 27.08e9 iters) -> NO MAT
 
 ### [2026-10-13 14:40:39] A-paths EXHAUSTED. Next = Lead C (p-id red-herring; modifyDate predates hash) + Lead E (2-char edits inside a paragraph; untested, single-char already 0). BEWARE: 2-char full-pipeline ~6e8 cands = ~15h; design for optimal-first-time.
 rbbrun: command not found: A-paths EXHAUSTED. Next = Lead C (p-id red-herring; modifyDate predates hash) + Lead E (2-char edits inside a paragraph; untested, single-char already 0). BEWARE: 2-char full-pipeline ~6e8 cands = ~15h; design for optimal-first-time.
+
+### [2026-10-13 14:42:47] x_what2 -> 0 (2.08e9) ; x12b -> 0 (27.08e9) ; A-paths exhausted ; NEXT = Lead C/E 2-char edits (design-first)
+rbbrun: no such file or directory: x_what2 -> 0 (2.08e9) ; x12b -> 0 (27.08e9) ; A-paths exhausted ; NEXT = Lead C/E 2-char edits (design-first)
