@@ -200,3 +200,6 @@ rbbrun: no such file or directory: echo 'x_what2 -> 0 ; x12b -> 0 ; A-paths exha
 
 ### [2026-10-13 14:45:46] x_what2 -> 0 (2.08e9) ; x12b -> 0 (27.08e9) ; A-paths EXHAUSTED ; NEXT = Lead C/E 2-char case-flip sweep (design below)
 rbbrun: no such file or directory: x_what2 -> 0 (2.08e9) ; x12b -> 0 (27.08e9) ; A-paths EXHAUSTED ; NEXT = Lead C/E 2-char case-flip sweep (design below)
+
+### [2026-10-13 15:06:46] toggle2: word<=4 (594,152) -> 0 ; para 2-toggles-in-paragraph (4,100,010) -> 0. bench: derive=782us (pbkdf2 572us=73%, md5 70us, ec 114us). Pool aggregate measured 7k/s vs 29k/s single-thread-implied -> investigating before the 25h 'all' run.
+rbbrun: no such file or directory: toggle2: word<=4 (594,152) -> 0 ; para 2-toggles-in-paragraph (4,100,010) -> 0. bench: derive=782us (pbkdf2 572us=73%, md5 70us, ec 114us). Pool aggregate measured 7k/s vs 29k/s single-thread-implied -> investigating before the 25h 'all' run.
