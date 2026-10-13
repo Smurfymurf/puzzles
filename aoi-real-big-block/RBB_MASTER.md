@@ -182,3 +182,6 @@ Check the resulting addresses against TARGET 14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W.
 2026-10-13  MACHINE RESTART -> x12 killed (no resume) ; nothing running on reboot
 2026-10-13  NEXT: run x_what2 (~10m) then hunt_x12b (~1.6h) ; then leads B/C/D/E
 ################################################################################
+
+### [2026-10-13 12:20:11] MASTER DOC rewritten as clean handover; restart kills x12; next = x_what2 then x12b
+rbbrun: command not found: MASTER DOC rewritten as clean handover; restart kills x12; next = x_what2 then x12b
