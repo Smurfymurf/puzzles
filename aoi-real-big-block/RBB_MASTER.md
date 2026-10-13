@@ -203,3 +203,6 @@ rbbrun: no such file or directory: x_what2 -> 0 (2.08e9) ; x12b -> 0 (27.08e9) ;
 
 ### [2026-10-13 15:06:46] toggle2: word<=4 (594,152) -> 0 ; para 2-toggles-in-paragraph (4,100,010) -> 0. bench: derive=782us (pbkdf2 572us=73%, md5 70us, ec 114us). Pool aggregate measured 7k/s vs 29k/s single-thread-implied -> investigating before the 25h 'all' run.
 rbbrun: no such file or directory: toggle2: word<=4 (594,152) -> 0 ; para 2-toggles-in-paragraph (4,100,010) -> 0. bench: derive=782us (pbkdf2 572us=73%, md5 70us, ec 114us). Pool aggregate measured 7k/s vs 29k/s single-thread-implied -> investigating before the 25h 'all' run.
+
+### [2026-10-13 15:15:48] toggle2: para (4,100,010) -> 0. bench2 12/16/23w = 13310/16367/19907 per s -> 23w best. all=642,468,300 ETA ~9h. LAUNCHED all (nohup, resume via toggle2_all_done.log). Lead E live; lead 1 (B76 solver) in parallel.
+rbbrun: no such file or directory: toggle2: para (4,100,010) -> 0. bench2 12/16/23w = 13310/16367/19907 per s -> 23w best. all=642,468,300 ETA ~9h. LAUNCHED all (nohup, resume via toggle2_all_done.log). Lead E live; lead 1 (B76 solver) in parallel.
