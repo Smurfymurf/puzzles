@@ -206,3 +206,6 @@ rbbrun: no such file or directory: toggle2: word<=4 (594,152) -> 0 ; para 2-togg
 
 ### [2026-10-13 15:15:48] toggle2: para (4,100,010) -> 0. bench2 12/16/23w = 13310/16367/19907 per s -> 23w best. all=642,468,300 ETA ~9h. LAUNCHED all (nohup, resume via toggle2_all_done.log). Lead E live; lead 1 (B76 solver) in parallel.
 rbbrun: no such file or directory: toggle2: para (4,100,010) -> 0. bench2 12/16/23w = 13310/16367/19907 per s -> 23w best. all=642,468,300 ETA ~9h. LAUNCHED all (nohup, resume via toggle2_all_done.log). Lead E live; lead 1 (B76 solver) in parallel.
+
+### [2026-10-13 15:47:11] toggle2 RE-RUN on certified base (aoi._text, mask=3796477, no trailing): word<=4 (594,152) -> 0 ; para 2-in-paragraph (4,100,010) -> 0. Base verified: pidcheck 272/273, Stage1 reproduced. Next: all = C(35825,2) = 642,468,300.
+rbbrun: no such file or directory: toggle2 RE-RUN on certified base (aoi._text, mask=3796477, no trailing): word<=4 (594,152) -> 0 ; para 2-in-paragraph (4,100,010) -> 0. Base verified: pidcheck 272/273, Stage1 reproduced. Next: all = C(35825,2) = 642,468,300.
