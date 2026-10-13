@@ -209,3 +209,53 @@ rbbrun: no such file or directory: toggle2: para (4,100,010) -> 0. bench2 12/16/
 
 ### [2026-10-13 15:47:11] toggle2 RE-RUN on certified base (aoi._text, mask=3796477, no trailing): word<=4 (594,152) -> 0 ; para 2-in-paragraph (4,100,010) -> 0. Base verified: pidcheck 272/273, Stage1 reproduced. Next: all = C(35825,2) = 642,468,300.
 rbbrun: no such file or directory: toggle2 RE-RUN on certified base (aoi._text, mask=3796477, no trailing): word<=4 (594,152) -> 0 ; para 2-in-paragraph (4,100,010) -> 0. Base verified: pidcheck 272/273, Stage1 reproduced. Next: all = C(35825,2) = 642,468,300.
+
+### [2026-10-13 ~17:50] SESSION: separator correction + truncated-pid bug + FFWW structure
+
+CRITICAL CORRECTIONS (supersede earlier entries):
+1. HASHED SEPARATOR IS CRLFCRLF (13 10 13 10), not LF LF. The author's own ASCII note
+   (2019-07-28 pre-rehash; 2019-07-30 rehash; 2019-08-01 "Hit enter twice ... 13 10 13 10")
+   says the HASHED text uses two line breaks. Pre-rehash escrow 1EFojc used ONE line break.
+   Stage-1 came from bitcointalk HTML and used LF LF -> the old "\n\n" canonical base was
+   WRONG for RBB. All pre-2026-10-13 sweeps assumed LF LF.
+2. "PARA 78" IS 0-BASED INDEX 77 (1-based 78). Edited para = index 77 = '"What?"'.
+   Future X searches MUST target 0-based 77.
+3. TRUNCATED-PID BUG: 6 scripts (x_what, x_what2, x_tatoeba, x_corpus, hunt_x12,
+   hunt_x12b) compared a 32-hex md5 to a 26-hex literal "8b71bade9685d3388455b06a0d"
+   -> could never match. ~2.9e10 candidates were invalid. Correct pid =
+   8b71bade9685d3388452bc4755b06a0d. Scripts sed-fixed; two re-run, two pending.
+4. Base is now built by aoi._text (certified), mask=3796477 (clears bits for a,i,m,s,t),
+   join/trail selectable. My hand-rolled rule() diverged from aoi's certified
+   _first_letter (lowercase-first handling) and is no longer used for the base.
+
+VERIFIED THIS SESSION:
+- pidcheck 272/273 -> chapter bytes identical to Wattpad storage (sole mismatch = para 77).
+- aoi.py reproduces Stage-1 end-to-end (md5 9dd2efb9 -> 19TbyN5 at idx 0).
+- RBB funding tx a1916e7ed9eac3fcc56a55056328cb09d06925e2694f2e6720de12b228514d1f:
+  two plain P2PKH outputs, NO OP_RETURN -> no on-chain clue.
+
+NEW STRUCTURAL FINDING:
+- Three planted FFWW groups at 0-based paras 4-7, 92-95, 167-170; each first letters
+  F F W W and last letters s t n m (STNM after the rule uppercases last letters).
+  Identical pattern x3 -> designed. Meta block (0-based 225-246) is the spec:
+  I/T/A/S/M first letters; the four FFWW paragraphs; "look at the last letter of each
+  of these" -> STNM; "WW obviously is UUUU / four U, for you"; "I STNM" / "Nm ST";
+  first-four+last-four words -> "Today, I". Finney quote embedded at 0-based 229-233.
+
+VALID NEGATIVES (on corrected bytes):
+- 12 untwisted bases (join crlf2/crlf/lf2/lf x trail '', '\n', '\r\n') -> 0
+- word <=4 toggles/word on crlf2, crlf, lf2 -> 0
+- para (2 toggles/paragraph) on crlf2 (4,100,010) and crlf (3,975,659) -> 0
+- NBSP->space subsets (2^6) and VIrgin/BItcoin corrections on 3 joins -> 0
+- exotic joins ("", " ", tab, mixed), leading/trailing whitespace, BOM, WW->UUUU and
+  FFWW->FFUUUU hints, md5-of-pid-list -> 0
+- xcrack (chapter sentences/paras + decorations vs correct pid) -> 0
+- x_what2 RE-RUN correct pid: 2,076,721,920 -> 0 ; x_tatoeba RE-RUN: 2,038,719 -> 0
+
+PENDING / NEXT (ranked):
+1. all jCRLF2 = 641,697,400 (2 toggles anywhere) -- READY, not launched.
+2. all jCRLF (pre-rehash separator; _hit already checks both escrows).
+3. 3 toggles restricted to meta-named sign positions (~1.6e8, cheap).
+4. Targeted sweep over the 12 FFWW paragraphs + meta block.
+5. Solved-block calibration (blocks 73/74) via author's r/Grycoin threads (curl).
+6. B76 solver: issue #43 (moonflightrocket-ops), floflo777, or DM.
