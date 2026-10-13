@@ -185,3 +185,6 @@ Check the resulting addresses against TARGET 14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W.
 
 ### [2026-10-13 12:20:11] MASTER DOC rewritten as clean handover; restart kills x12; next = x_what2 then x12b
 rbbrun: command not found: MASTER DOC rewritten as clean handover; restart kills x12; next = x_what2 then x12b
+
+### [2026-10-13 14:40:33] x12b (1..5-word topic vocab, 27.08e9 iters) -> NO MATCH. x_what2 (2.08e9 What?-family) -> NO MATCH.
+rbbrun: command not found: x12b (1..5-word topic vocab, 27.08e9 iters) -> NO MATCH. x_what2 (2.08e9 What?-family) -> NO MATCH.
