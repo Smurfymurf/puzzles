@@ -194,3 +194,6 @@ rbbrun: command not found: A-paths EXHAUSTED. Next = Lead C (p-id red-herring; m
 
 ### [2026-10-13 14:42:47] x_what2 -> 0 (2.08e9) ; x12b -> 0 (27.08e9) ; A-paths exhausted ; NEXT = Lead C/E 2-char edits (design-first)
 rbbrun: no such file or directory: x_what2 -> 0 (2.08e9) ; x12b -> 0 (27.08e9) ; A-paths exhausted ; NEXT = Lead C/E 2-char edits (design-first)
+
+### [2026-10-13 14:43:35] echo 'x_what2 -> 0 ; x12b -> 0 ; A-paths exhausted ; NEXT = Lead C/E 2-char edits (design-first)'
+rbbrun: no such file or directory: echo 'x_what2 -> 0 ; x12b -> 0 ; A-paths exhausted ; NEXT = Lead C/E 2-char edits (design-first)'
