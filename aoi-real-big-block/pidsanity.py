@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # pidsanity.py - does Wattpad's stored paragraph text still match its own data-p-id?
 # Drift (any paragraph whose pid is md5 of content +/- whitespace) => a 2019 copy is decisive.
-import re, sys, hashlib, urllib.request, json
+import re, sys, os, html, hashlib, urllib.request, json
 
 UA={'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36'}
 IDS=[717956015,720888559,720895205,742662804,759761389,760378354]
@@ -13,6 +13,7 @@ def get(u):
 def strip(c): return re.sub(r'<[^>]+>','',c)
 def paras(t): return re.findall(r'<p data-p-id="([0-9a-f]{32})">(.*?)</p>',t,re.S)
 def md5(s): return hashlib.md5(s.encode('utf-8')).hexdigest()
+def dec(c): return html.unescape(re.sub(r'<[^>]+>','',c))
 
 def ws_explain(s,pid):
     for a in WS:
@@ -44,16 +45,19 @@ def main():
     tot=0; bad=0; drift=0
     for cid in ids:
         txt=None
+        best=None
         for u in ('https://www.wattpad.com/%d'%cid,'https://www.wattpad.com/amp/%d'%cid):
             try:
-                t=get(u)
-                if paras(t): txt=t; break
-            except Exception as e: pass
+                t=get(u); ps=paras(t); print('   %s -> %d pids'%(u,len(ps)))
+                if ps and (best is None or len(ps)>len(best[1])): best=(u,ps)
+            except Exception as e: print('   %s FAIL %s'%(u,e))
+        if not best: continue
+        txt=best[0]
         if txt is None:
             print('%d  no pids'%cid); continue
         ps=paras(txt); m=0; det=[]
         for pid,c in ps:
-            s=strip(c)
+            s=dec(c)
             if md5(s)==pid: m+=1
             else:
                 ex=ws_explain(s,pid)
