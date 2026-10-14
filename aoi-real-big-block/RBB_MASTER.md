@@ -314,3 +314,4 @@ PARALLEL FREE WORK
   3090 is sm_86 (any current CUDA); 5090 is sm_120 (needs CUDA 12.8+).
 
 STATUS: sign3 (544 sign positions, 2.68e7) run on crlf2. NEXT = pidpre.py (steps 1-3 above).
+### [2026-10-14] sign3 crlf2 (<=3 toggles x 544 sign positions, 26,831,984) -> 0 clean negative. NEXT = pidpre pid-oracle route
