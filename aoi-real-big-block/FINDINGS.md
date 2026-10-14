@@ -67,3 +67,13 @@ Also re-confirms: 13 paragraphs carry a TRAILING SPACE that is part of the hashe
 (these were the 13 initial "mismatches" while we were wrongly .strip()ing). Trailing
 spaces are load-bearing - keep them in the canonical hash input.
 => para 77 ('"What?"', 2nd occurrence; first is 0-based 33) was NEVER edited.
+
+## CALIBRATION: separator is LF LF, NOT CRLFCRLF (2026-10-14)
+block2cal.py, span = first "I" .. period after "method" (10 paragraphs, exactly as the
+author specified), no trailing:
+  LF2   len=1549  md5=7759227d7406  <-- MATCHES the author's published unchanged prefix
+  CRLF2 len=1567  md5=e997007971f6  <-- does NOT
+=> Grycoin Block 2 was hashed with "\n\n". The author's "13 10 13 10" note reflects his
+   TOOL's display, not his input bytes.
+=> our 2026-10-13 correction to CRLFCRLF is WRONG. Re-run key sweeps on LF LF.
+Span + separator + no-trailing now all pinned against a known-good digest.
