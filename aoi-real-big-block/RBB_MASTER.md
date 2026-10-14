@@ -259,3 +259,6 @@ PENDING / NEXT (ranked):
 4. Targeted sweep over the 12 FFWW paragraphs + meta block.
 5. Solved-block calibration (blocks 73/74) via author's r/Grycoin threads (curl).
 6. B76 solver: issue #43 (moonflightrocket-ops), floflo777, or DM.
+
+### [2026-10-13] xbrute 7 (X = <=7 chars over [a-z ], all 1.09e10 strings) -> 0
+Valid negative with correct pid. X is not a short lowercase string. Next: xbrute 8.
