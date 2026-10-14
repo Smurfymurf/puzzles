@@ -57,3 +57,13 @@ matches our own NEGATIVES A1 observation that duplicated paragraphs carry differ
 => the hashed text contains '"What?"'. Retire X leads: old B6-B14, x_what2, x12b, xbrute,
    xcrack, p77pid, para77 splice, pidphrase, hunt_x*.
 Source: diginen43 comment 2026-10-13 (r/Grycoin/cgkpbb); independently reproduced here.
+
+## X PERMANENTLY CLOSED — duplicate-pid formula verified general (2026-10-14)
+pidformula.py: all 273 paragraphs of chapter 720888559 reproduce their stored pids with
+  first occurrence: md5(raw content)   [NOTE: raw, NOT stripped]
+  nth duplicate:    md5(hex(md5(text)) + str(n)), n from 1
+RESULT: paragraphs=273  formula_ok=273  mismatches=0  -> FORMULA CONFIRMED (general)
+Also re-confirms: 13 paragraphs carry a TRAILING SPACE that is part of the hashed bytes
+(these were the 13 initial "mismatches" while we were wrongly .strip()ing). Trailing
+spaces are load-bearing - keep them in the canonical hash input.
+=> para 77 ('"What?"', 2nd occurrence; first is 0-based 33) was NEVER edited.
