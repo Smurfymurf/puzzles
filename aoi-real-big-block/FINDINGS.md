@@ -33,3 +33,16 @@
 
 ### ARTIFACTS
 parts/*.html, ~/second_parts.json, author_examples.txt, FINDINGS.md, NEGATIVES.md
+
+## E1 — meta block (0-based 224-247) read as literal instructions
+Operation stated by the author: flip FIRST letter (lower) + LAST letter (upper) of the
+paragraphs that LACK a sign; the message appears in the flipped LAST letters.
+signs = "I, T, A, S, and M as first letters of each paragraph OF THIS POST" (= the Finney
+post). Message: STNM, + adjacent I = "I STNM"; matched to the genesis "Nm ST" signature.
+FFWW = dedication (WW = UUUU = "four U, for you"; FF left open).
+Technique stated: first four + last four words of the hint paragraph -> "Today, I".
+CHAPTER REPLICATES THE DEVICE 3x (I + FFWW, last letters s t n m): 0-based 3-7, 91-95,
+~167-172.
+CRACK: the sign-set is defined against the Finney post, not the chapter. Using
+{I,T,A,S,M} on a 273-para chapter is an ASSUMPTION (already shown underdetermined on
+Stage One). Prime suspect for the remaining twist.
