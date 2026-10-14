@@ -2,3 +2,5 @@ pairs todo=35831 total_pairs=641912365
   i 200/35831 0.53 i/s ETA 18.76h
   i 400/35831 0.50 i/s ETA 19.66h
   i 600/35831 0.51 i/s ETA 19.31h
+/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
