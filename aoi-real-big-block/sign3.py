@@ -154,6 +154,7 @@ def main():
     POS=_signpos(T0b,join.encode()); L=len(POS)
     total=L+L*(L-1)//2+L*(L-1)*(L-2)//6
     print('sign positions',L,'TOTAL',total,flush=True)
+    print('ETA est %.1f min at 19k/s'%(total/19000/60),flush=True)
     dlog=os.path.join(HOME,'sign3_%s_done.log'%tag)
     done=set(int(x) for x in open(dlog)) if os.path.exists(dlog) else set()
     todo=[i for i in range(L) if i not in done]
@@ -166,7 +167,7 @@ def main():
                 open(os.path.join(HOME,'sign3_FOUND.txt'),'a').write(repr(hits)+'\n')
                 print('FOUND',hits,flush=True)
             now=time.time()
-            if now-last>=15:
+            if now-last>=10:
                 last=now; r=cd/max(now-t0,1e-9)
                 print('done %d/%d (%.3f%%) %.0f/s ETA %.1f min'%(cd,total,100*cd/total,r,(total-cd)/r/60 if r else 0),flush=True)
     print('END sign',cd,flush=True)

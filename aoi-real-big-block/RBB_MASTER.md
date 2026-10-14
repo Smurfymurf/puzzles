@@ -262,3 +262,55 @@ PENDING / NEXT (ranked):
 
 ### [2026-10-13] xbrute 7 (X = <=7 chars over [a-z ], all 1.09e10 strings) -> 0
 Valid negative with correct pid. X is not a short lowercase string. Next: xbrute 8.
+
+---
+
+## [2026-10-14] STRATEGIC RE-READ — the pid is an ORACLE, not a marker
+
+THE INSIGHT
+- Wattpad data-p-id = md5(paragraph). 272/273 paragraphs verify against it.
+- The single mismatch is 0-based para 77 = "What?" , pid 8b71bade9685d3388452bc4755b06a0d.
+- We have been using that pid as a LOCATION marker. It is a 128-bit ORACLE on the exact
+  bytes of the one paragraph that deviates. Recover its preimage and the puzzle collapses.
+- EVERY sweep run so far is CASE-ONLY (b ^= 0x20): toggle2 word/para/all, sign3, NBSP pass,
+  BOM pass, VIrgin/BItcoin fixes. => a changed LETTER or PUNCTUATION (not its case) could
+  NEVER have matched. THIS IS THE GAP. ~1.4e10 candidates burned could not cover it.
+
+NEXT ACTIONS (ranked, all free)
+1. Re-verify the pid convention: for all 273 paras compute md5(raw) and md5(ruled) vs the pid
+   list. One will match 272. Tells us whether the preimage we want is the raw page paragraph
+   or the already-rule-applied paragraph. 1 min, definitive.
+2. Preimage search md5(S) = 8b71bade9685d3388452bc4755b06a0d over a TIGHT neighbourhood of
+   "What?": all case variants, quote/whitespace/punctuation variants, edit distance <=4
+   (sub/ins/del) over a ~70-char alphabet. ~1e9 cands. MD5 ONLY - no BIP32/EC -> minutes.
+3. Splice each hit into the certified base BOTH ways (raw then apply rule / pre-ruled) and run
+   the real pipeline.
+
+PROBABILITIES (honest)
+- ~45-60% that the preimage search alone cracks it outright.
+- ~near-certain it reveals the edit SEMANTICS (case vs character, and which class), which turns
+  the open 2.9e11 brute force into a small targeted sweep.
+
+GPU VERDICT: NOT NEEDED YET, probably never. pid route is 1e9 MD5-only = minutes, free.
+GPU only pays if the preimage fails AND points at a GLOBAL character-edit space (~1e11).
+xbrute 8 (2.9e11) is the LAST resort - least information per candidate.
+
+PARALLEL FREE WORK
+- Ask the B76 solver how the B76 twist was SHAPED (issue #43 moonflightrocket-ops, floflo777,
+  AppleLamps). Same puzzle family, same mechanic, already cracked.
+- Finish decoding the meta block (0-based 225-246). It is the author's SPEC for the twist
+  ("I/T/A/S/M" signs, "look at the last letter of each of these", "WW obviously is UUUU"),
+  not decoration.
+
+### GPU rental research (parked, only if needed)
+- vast.ai live offers: RTX 3090 from $0.088/hr (min_bid $0.084), RTX 5090 $0.213 (min_bid
+  $0.101), RTX 4090 $0.366 (worst value). RunPod = ~4x the price but reliable; hostkey = monthly.
+- Best config if we ever rent: 1x RTX 3090, interruptible bid ~$0.085, disk trimmed to 25-30GB
+  (disk is billed hourly - an over-provisioned disk can double the bill), cores 4, RAM 8GB.
+- Ceiling is only ~5-15x: MD5 over 46KB per candidate becomes the bottleneck (~150k/s on a 3090).
+- Cost: all near-term sweeps together < $0.50. xbrute 8 = ~$47 on 1x3090 over 3 weeks, or under
+  6 days on 4x3090 (scaling = one process per GPU, disjoint ranges; no multi-GPU CUDA needed).
+- No off-the-shelf tool does arbitrary-text -> MD5 -> BIP39 -> address. Needs a custom kernel.
+  3090 is sm_86 (any current CUDA); 5090 is sm_120 (needs CUDA 12.8+).
+
+STATUS: sign3 (544 sign positions, 2.68e7) run on crlf2. NEXT = pidpre.py (steps 1-3 above).
