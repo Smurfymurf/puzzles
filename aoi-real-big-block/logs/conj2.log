@@ -1,0 +1,18 @@
+=== S1 = complement-of-aismt ['b', 'c', 'd', 'e', 'f', 'g', 'h', 'k', 'l', 'n', 'o', 'p', 'r', 'v', 'w', 'y'] ===
+  65536/262144 1934/s ETA 1.7 min
+  131072/262144 3861/s ETA 0.6 min
+  196608/262144 5748/s ETA 0.2 min
+  262144/262144 4567/s ETA 0.0 min
+  done complement-of-aismt 57 s
+=== S1 = aismt ['a', 'i', 'm', 's', 't'] ===
+  65536/262144 1899/s ETA 1.7 min
+  131072/262144 3781/s ETA 0.6 min
+  196608/262144 5648/s ETA 0.2 min
+  262144/262144 4588/s ETA 0.0 min
+  done aismt 57 s
+=== S1 = fw ['f', 'w'] ===
+  65536/262144 1903/s ETA 1.7 min
+  131072/262144 3793/s ETA 0.6 min
+  196608/262144 5667/s ETA 0.2 min
+  262144/262144 4585/s ETA 0.0 min
+  done fw 57 s

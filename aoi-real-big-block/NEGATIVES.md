@@ -84,3 +84,55 @@ D5. Ask the Block 76 solver for the serialisation convention of a final Aoi bloc
 - p77pid.py - 171 md5 variants of the para-77 text (all case combos, straight/curly/entity quotes, lead+trail tab/CR/LF/CRLF/NBSP/ZWSP/thin/narrow space, doubled spaces, escaped quotes, p-tag wrappers). None equals stored pid 8b71bade. Sanity md5('"What?"')=184826be reproduced. Stored bytes are neither a whitespace nor a case variant, so either an invisible codepoint outside the set or a stale pid from a longer pre-edit string. Para 77 reclassified as bookkeeping, deprioritised.
 
 - unflip.py K<=3 - 3,354,168 candidates (up to 3 paragraphs switched to the other side of the rule), base md5 confirmed 47ff387425c1a283c22eac15f0268867. 0 hits, 2329s. Fourth consecutive clean sweep. Paragraph-level/letter-mask model now judged wrong, not under-searched.
+
+- KEY FINDING: finney.txt has 17 paragraphs, exactly 5 flip (first letters F,F,W,W,[). The mask rule 'exclude a,i,m,s,t' is indistinguishable on this text from 'include only f,w' - the post has no other letters. Chapter meta decode already found planted F,F,W,W paragraph groups. Sign is likely content/initial based, not a broad letter mask.
+
+- signs6 - 49,140 combos: 4095 subsets of the 12 FFWW quad paragraphs x 4 modes x 3 granularities, plus content-rule sets (f/w first letters, first-word set, quads+230 block, mirror paras 5/167). 0 hits. Quads are a repeated STNM label, not the sign set.
+- NOTE: upperFirst is a near no-op (paragraphs already start upper / end lower); the repeated md5 db11a7fd is the unflipped base.
+- OPEN HYPOTHESIS: STRUCT='br'. Author said the extra line breaks are 'needed to solve the block'; chapter has 10 internal br (stored chr(0)) and 6 NBSP. aoi.py has an unrun STRUCT='br' mode that re-segments paragraphs. All 4.19M masks assume STRUCT='p'.
+
+- signs8 - STRUCT='br' (283 paragraphs) with rule x 4 modes: 0 hits. Also p-mode flipping the 10 internal-br paragraphs and the 6 NBSP paragraphs, 4 modes each: 0 hits.
+- OBSERVATION: br/NBSP paragraphs carry the author's construction notes ('Satoshi' anagram of 'THOMAS', nonces I and M, HAL=IBM, 'the third nonce'). Semantically loaded, mechanically negative.
+- OPEN: rule FORM (which letter of a paragraph is read) has never been swept - only the rule SET (which letters).
+
+- signs7 - all 262,143 subsets of the 18 distinct LAST letters: 0 hits. DISJOINT=False (flipped stnmy vs unflipped egsssgtnsnoy overlap). No single-feature rule can be correct.
+- signs9 - only para_first / firstword_first / firstsent_first are separable on Stage One, all giving the same exclude set 'aimst' and identical chapter histograms. Anchor is not the variable.
+- OPEN: skip_quotes. Stage One has ZERO quote-initial paragraphs; the chapter has 63. aoi.py hardcodes skip_quotes=True in every COMBOS entry, so the 4.19M sweep covers only one branch.
+
+
+=== SESSION: rule space closed; pid CONFIRMED REAL; twist style identified ===
+NEGATIVES (all 0 hits):
+- conj3: OR and XOR of first-letter sets {f,w,e}, {f,w}, {a,i,m,s,t} against ALL
+  262,144 last-letter subsets. 6 passes, ~58 s each, clean.
+  => the entire boolean {first-letter, last-letter} rule space is now negative
+     (single-feature, AND, OR, XOR). mask2 remains the only open member.
+- pid-vs-bookkeeping: 40+ schemes (numeric salts, parent pid 184826be, element
+  wrappers, curly/straight quote variants, case variants, repeats) -> NONE match
+  8b71bade9685d3388452bc4755b06a0d. The para-77 pid is a GENUINE pre-edit md5.
+  => para 77 was really edited in place; X is real; the pid is a valid oracle.
+  => SUPERSEDES the earlier 'bookkeeping, deprioritised' entry.
+- pid matches NO paragraph in any trivial case form -> X is not a moved/duplicated para.
+
+READING (the chapter is the author's own Stage-1 walkthrough):
+- paras 226-246 state the rule in prose: signs = I,T,A,S,M as paragraph FIRST letters
+  (227-228); flip the paragraphs that DON'T carry them (229); STNM = their last letters
+  (235-236); 'I STNM' (238); 'Nm ST ... exactly the same signature' (239); WW =
+  'four U, for you' (240).
+- Planted geometry: f,f,w,w blocks at 4-7, 92-95, 167-170, each PRECEDED by an 'i'
+  paragraph (3, 91, 166) -> 'I STNM' planted three times. Meta's own copy is
+  f,f,w,i,w (230-234) = five, with the I IN BETWEEN, per 229.
+- Certified rule flips 119 of 273 paras vs 5 of 17 on Stage One. On a bitcointalk post
+  'first letter not in signs' == 'the four inserted paragraphs'; on 273 paras of prose
+  it is NOT. The rule is a proxy that only holds on Stage One.
+- Dialogue at the defect: 76 (Aoi: '...reverse Turing test.') -> 77 '"What?"' ->
+  78 (Aoi: 'Of course you know what a Turing test is...'). X was Tom's line.
+
+TWIST STYLE:
+- Abnormal mid-word capitals (block 29 style, 'voice'->'vOIce') at: 105/111
+  WorldWideAbsoluteCarbonBudget, 106 FUCKFuck.../AndrewYangForPresident (hashtag-
+  CamelCase, benign); 127 'VIrgin', 135 'BItcoin', 208 'BITcoin'+'AHScoin'.
+  208 is the meta's own BIT/AHS wordplay (cf. para 212).
+- OPEN: are the abnormal capitals 'the signs' for the chapter (flip exactly those
+  paragraphs/letters) rather than the whole 119?
+
+CONCLUSION: rule almost certainly right; the unknown is X (para 77 original line).

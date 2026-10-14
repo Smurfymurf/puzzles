@@ -1,0 +1,36 @@
+=== OR fwe ===
+  65536/262144 1887/s ETA 1.7 min
+  131072/262144 3764/s ETA 0.6 min
+  196608/262144 5623/s ETA 0.2 min
+  262144/262144 4498/s ETA 0.0 min
+  done OR fwe 58 s
+=== OR fw ===
+  65536/262144 1875/s ETA 1.7 min
+  131072/262144 3735/s ETA 0.6 min
+  196608/262144 5573/s ETA 0.2 min
+  262144/262144 4507/s ETA 0.0 min
+  done OR fw 58 s
+=== OR aismt ===
+  65536/262144 1824/s ETA 1.8 min
+  131072/262144 3642/s ETA 0.6 min
+  196608/262144 5434/s ETA 0.2 min
+  262144/262144 4388/s ETA 0.0 min
+  done OR aismt 60 s
+=== XOR fwe ===
+  65536/262144 1868/s ETA 1.8 min
+  131072/262144 3729/s ETA 0.6 min
+  196608/262144 5565/s ETA 0.2 min
+  262144/262144 4554/s ETA 0.0 min
+  done XOR fwe 58 s
+=== XOR fw ===
+  65536/262144 1958/s ETA 1.7 min
+  131072/262144 3903/s ETA 0.6 min
+  196608/262144 5791/s ETA 0.2 min
+  262144/262144 4692/s ETA 0.0 min
+  done XOR fw 56 s
+=== XOR aismt ===
+  65536/262144 1839/s ETA 1.8 min
+  131072/262144 3653/s ETA 0.6 min
+  196608/262144 5442/s ETA 0.2 min
+  262144/262144 4555/s ETA 0.0 min
+  done XOR aismt 58 s
