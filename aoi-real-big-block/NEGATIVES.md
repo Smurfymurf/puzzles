@@ -136,3 +136,20 @@ TWIST STYLE:
   paragraphs/letters) rather than the whole 119?
 
 CONCLUSION: rule almost certainly right; the unknown is X (para 77 original line).
+
+## Block 2 calibration (2026-10-14) — separator WON, address route inconclusive
+WON (definitive):
+- Span = first "I" .. period after "method", 10 paragraphs, no trailing, LF LF
+  -> unchanged md5 = 7759227d7406... = author's published prefix 7759227. EXACT.
+- CRLFCRLF gives e9970079..., i.e. WRONG. => separator is LF LF.
+- flip FORM confirmed = toggle case of the first and last letter of a selected paragraph
+  (matches the author's own description and our certified Stage One).
+NOT RESOLVED (time-boxed):
+- Solved prefix 3c6 is underdetermined (3 hex): 257 of 1.05e6 paragraph-flip combos match.
+- NONE of those 257 reaches the prize address 1tzieUfbeQghz2zjDeGHcAEfzCRgX6eLi under
+  any of: BIP39->BIP44 idx 0..200, raw privkey, sha256(md5), sha256(text), sha256(md5hex).
+- So either the flip space is richer than "paragraph first/last" (author's own example
+  flips 'himself' = an INTERIOR letter), or the winner's derivation step is exotic
+  (author: "how to go from that to claiming the prize is not [obvious], not even to me").
+- Our search text is proven correct by the unchanged-hash match, so this is a
+  rule/derivation gap, not a text gap.
