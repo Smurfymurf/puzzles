@@ -1,102 +1,126 @@
 story parts found: 33
    https://www.wattpad.com/717956015 -> 22 pids
    https://www.wattpad.com/amp/717956015 -> 49 pids
-717956015 paras=0 match=0 MISMATCH=0
+717956015 paras=49 match=47 MISMATCH=2
+    pid=7c842e9d35f7b2472181aacc946bc08a content='----------------------------------------------------------------------' ws_explains=None
+    pid=66c7496f0bf6f97027da1fb179fea72b content="Format: [solution] TOMI If you don't get this, sorry, it is hard [link" ws_explains=None
    https://www.wattpad.com/720888559 -> 36 pids
    https://www.wattpad.com/amp/720888559 -> 273 pids
-720888559 paras=0 match=0 MISMATCH=0
+720888559 paras=273 match=272 MISMATCH=1
+    pid=8b71bade9685d3388452bc4755b06a0d content='"What?"' ws_explains=None
    https://www.wattpad.com/720889517 -> 17 pids
    https://www.wattpad.com/amp/720889517 -> 17 pids
-720889517 paras=0 match=0 MISMATCH=0
+720889517 paras=17 match=17 MISMATCH=0
    https://www.wattpad.com/720890652 -> 44 pids
    https://www.wattpad.com/amp/720890652 -> 44 pids
-720890652 paras=0 match=0 MISMATCH=0
+720890652 paras=44 match=43 MISMATCH=1
+    pid=9363489cc884fafceb8a3e9473310f06 content='137SFKp9MPjymMQVk85oarHoaxUd9QyeiA' ws_explains=None
    https://www.wattpad.com/720892473 -> 17 pids
    https://www.wattpad.com/amp/720892473 -> 17 pids
-720892473 paras=0 match=0 MISMATCH=0
+720892473 paras=17 match=17 MISMATCH=0
    https://www.wattpad.com/720893344 -> 22 pids
    https://www.wattpad.com/amp/720893344 -> 22 pids
-720893344 paras=0 match=0 MISMATCH=0
+720893344 paras=22 match=22 MISMATCH=0
    https://www.wattpad.com/720895205 -> 35 pids
    https://www.wattpad.com/amp/720895205 -> 766 pids
-720895205 paras=0 match=0 MISMATCH=0
+720895205 paras=766 match=619 MISMATCH=147
+    pid=b0379cc5b37647c38970a0477e4152df content='Solved in 90 minutes.' ws_explains=None
+    pid=bbb1e9ab507e30708c5da59a9f9e03bc content='Format: [solution] BFUB [BFUB text] [link].' ws_explains=None
+    pid=aedefdb0cea59ae8c767ad30743aa16b content='Format: [solution] [link] with exactly one space between them.' ws_explains=None
+    pid=b05241d9281da1658547efbee0f6580d content='Format: [solution] BFUB [BFUB] [link]' ws_explains=None
+    pid=bfbdff2f404a3df7304226e9b61018c2 content='Solved in one hour.' ws_explains=None
+    pid=5ef1e432473bb504b6ef8a84a3faa869 content='Format: [solution] BFUB [BFUB] [link] with exactly one space between.' ws_explains=None
+    pid=d74950442da5eb63999c9a9cbc89cb3b content='Format: [solution] BFUB [BFUB] [link]' ws_explains=None
+    pid=a50fb171499f890ff45b9be90d96a984 content='Question: Bitcoin Second' ws_explains=None
+    pid=505c0f61e9165babd9b106b8f46aaf98 content='Question:' ws_explains=None
+    pid=1c18c6fbb3e3f86f5a5c40a8380bc302 content='Solved after 14 hours.' ws_explains=None
    https://www.wattpad.com/720895609 -> 15 pids
    https://www.wattpad.com/amp/720895609 -> 15 pids
-720895609 paras=0 match=0 MISMATCH=0
+720895609 paras=15 match=15 MISMATCH=0
    https://www.wattpad.com/721505724 -> 18 pids
    https://www.wattpad.com/amp/721505724 -> 18 pids
-721505724 paras=0 match=0 MISMATCH=0
+721505724 paras=18 match=18 MISMATCH=0
    https://www.wattpad.com/721795188 -> 7 pids
    https://www.wattpad.com/amp/721795188 -> 7 pids
-721795188 paras=0 match=0 MISMATCH=0
+721795188 paras=7 match=7 MISMATCH=0
    https://www.wattpad.com/722270069 -> 9 pids
    https://www.wattpad.com/amp/722270069 -> 9 pids
-722270069 paras=0 match=0 MISMATCH=0
+722270069 paras=9 match=9 MISMATCH=0
    https://www.wattpad.com/724030807 -> 10 pids
    https://www.wattpad.com/amp/724030807 -> 10 pids
-724030807 paras=0 match=0 MISMATCH=0
+724030807 paras=10 match=10 MISMATCH=0
    https://www.wattpad.com/724031950 -> 17 pids
    https://www.wattpad.com/amp/724031950 -> 17 pids
-724031950 paras=0 match=0 MISMATCH=0
+724031950 paras=17 match=17 MISMATCH=0
    https://www.wattpad.com/724275249 -> 11 pids
    https://www.wattpad.com/amp/724275249 -> 11 pids
-724275249 paras=0 match=0 MISMATCH=0
+724275249 paras=11 match=11 MISMATCH=0
    https://www.wattpad.com/725370188 -> 13 pids
    https://www.wattpad.com/amp/725370188 -> 13 pids
-725370188 paras=0 match=0 MISMATCH=0
+725370188 paras=13 match=13 MISMATCH=0
    https://www.wattpad.com/728374979 -> 14 pids
    https://www.wattpad.com/amp/728374979 -> 14 pids
-728374979 paras=0 match=0 MISMATCH=0
+728374979 paras=14 match=14 MISMATCH=0
    https://www.wattpad.com/728982194 -> 14 pids
    https://www.wattpad.com/amp/728982194 -> 14 pids
-728982194 paras=0 match=0 MISMATCH=0
+728982194 paras=14 match=14 MISMATCH=0
    https://www.wattpad.com/730790756 -> 21 pids
    https://www.wattpad.com/amp/730790756 -> 21 pids
-730790756 paras=0 match=0 MISMATCH=0
+730790756 paras=21 match=21 MISMATCH=0
    https://www.wattpad.com/731219798 -> 14 pids
    https://www.wattpad.com/amp/731219798 -> 14 pids
-731219798 paras=0 match=0 MISMATCH=0
+731219798 paras=14 match=14 MISMATCH=0
    https://www.wattpad.com/732405709 -> 22 pids
    https://www.wattpad.com/amp/732405709 -> 22 pids
-732405709 paras=0 match=0 MISMATCH=0
+732405709 paras=22 match=22 MISMATCH=0
    https://www.wattpad.com/733252660 -> 11 pids
    https://www.wattpad.com/amp/733252660 -> 11 pids
-733252660 paras=0 match=0 MISMATCH=0
+733252660 paras=11 match=11 MISMATCH=0
    https://www.wattpad.com/737461752 -> 13 pids
    https://www.wattpad.com/amp/737461752 -> 13 pids
-737461752 paras=0 match=0 MISMATCH=0
+737461752 paras=13 match=13 MISMATCH=0
    https://www.wattpad.com/740685487 -> 35 pids
    https://www.wattpad.com/amp/740685487 -> 35 pids
-740685487 paras=0 match=0 MISMATCH=0
+740685487 paras=35 match=35 MISMATCH=0
    https://www.wattpad.com/742662804 -> 46 pids
    https://www.wattpad.com/amp/742662804 -> 367 pids
-742662804 paras=0 match=0 MISMATCH=0
+742662804 paras=367 match=300 MISMATCH=67
+    pid=cfbf671b3aa4f8a25802a73c89b263a7 content='Format: [solution] TOMI [TOMI] [link]' ws_explains=None
+    pid=b1f994893fceb8d4eab83bfe31c32e51 content='Format: [solution] TOMI [TOMI]' ws_explains=None
+    pid=7c670cb5564a03f2e02e512019c8d849 content='Format: [solution] TOMI [TOMI]' ws_explains=None
+    pid=d7b3b5b890a0102dacab3815dcfeae0c content='Format: [solution] TOMI [TOMI]' ws_explains=None
+    pid=fbc991c8f320a9b0d1772eda5cd56cb1 content='Format: [solution] TOMI [TOMI]' ws_explains=None
+    pid=bc71cace8ee708226f947d81d6b99329 content='Format: [solution] TOMI [TOMI]' ws_explains=None
+    pid=401ce9a4dd6cfe9709266d7f1fd220d2 content='First digit of solution only MD5 hash is 0.' ws_explains=None
+    pid=728d8f437a1d24a4d9cc4407936f7fed content='Format: [solution]' ws_explains=None
+    pid=88a5a900763a644099f7897d72eaf909 content='Format: [solution]' ws_explains=None
+    pid=f32fa21f6ff7f56535dd0c4f2a2291ba content='Format: [solution] TOMI [TOMI]' ws_explains=None
    https://www.wattpad.com/743524593 -> 12 pids
    https://www.wattpad.com/amp/743524593 -> 12 pids
-743524593 paras=0 match=0 MISMATCH=0
+743524593 paras=12 match=12 MISMATCH=0
    https://www.wattpad.com/747478016 -> 11 pids
    https://www.wattpad.com/amp/747478016 -> 11 pids
-747478016 paras=0 match=0 MISMATCH=0
+747478016 paras=11 match=11 MISMATCH=0
    https://www.wattpad.com/752631800 -> 13 pids
    https://www.wattpad.com/amp/752631800 -> 13 pids
-752631800 paras=0 match=0 MISMATCH=0
+752631800 paras=13 match=13 MISMATCH=0
    https://www.wattpad.com/755457972 -> 18 pids
    https://www.wattpad.com/amp/755457972 -> 18 pids
-755457972 paras=0 match=0 MISMATCH=0
+755457972 paras=18 match=18 MISMATCH=0
    https://www.wattpad.com/757574334 -> 26 pids
    https://www.wattpad.com/amp/757574334 -> 26 pids
-757574334 paras=0 match=0 MISMATCH=0
+757574334 paras=26 match=26 MISMATCH=0
    https://www.wattpad.com/759761389 -> 14 pids
    https://www.wattpad.com/amp/759761389 -> 14 pids
-759761389 paras=0 match=0 MISMATCH=0
+759761389 paras=14 match=14 MISMATCH=0
    https://www.wattpad.com/760378354 -> 15 pids
    https://www.wattpad.com/amp/760378354 -> 15 pids
-760378354 paras=0 match=0 MISMATCH=0
+760378354 paras=15 match=15 MISMATCH=0
    https://www.wattpad.com/761570746 -> 18 pids
    https://www.wattpad.com/amp/761570746 -> 146 pids
-761570746 paras=0 match=0 MISMATCH=0
+761570746 paras=146 match=146 MISMATCH=0
    https://www.wattpad.com/762380140 -> 13 pids
    https://www.wattpad.com/amp/762380140 -> 13 pids
-762380140 paras=0 match=0 MISMATCH=0
+762380140 paras=13 match=13 MISMATCH=0
 ---
-TOTAL paras=0 mismatch=0 (0.000%) whitespace-explained=0
+TOTAL paras=2067 mismatch=218 (10.547%) whitespace-explained=0

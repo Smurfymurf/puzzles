@@ -49,7 +49,7 @@ def main():
         for u in ('https://www.wattpad.com/%d'%cid,'https://www.wattpad.com/amp/%d'%cid):
             try:
                 t=get(u); ps=paras(t); print('   %s -> %d pids'%(u,len(ps)))
-                if ps and (best is None or len(ps)>len(best[1])): best=(u,ps)
+                if ps and (best is None or len(ps)>len(best[1])): best=(t,ps)
             except Exception as e: print('   %s FAIL %s'%(u,e))
         if not best: continue
         txt=best[0]
