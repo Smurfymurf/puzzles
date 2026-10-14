@@ -101,7 +101,41 @@ def _pick(names):
             hits = sorted(glob.glob(os.path.join(root, "**", n), recursive=True))
             if hits: return hits[0]
     raise SystemExit("not found, tried:\n" + "\n".join(tried))
-WORDS = open(_pick(["bip39.txt","bip39_english.txt","english.txt"])).read().split()
+import sys
+def _load_words():
+    try:
+        w = open(_pick(["bip39.txt","bip39_english.txt","english.txt"])).read().split()
+        if len(w) == 2048: print("wordlist: file"); return w
+    except SystemExit:
+        pass
+    try:
+        from bip_utils import Bip39WordsListGetter, Bip39Languages
+        for fn in ("GetBip39WordsListByLanguage","GetBip39WordsList"):
+            try:
+                w = list(getattr(Bip39WordsListGetter, fn)(Bip39Languages.ENGLISH))
+                if len(w) == 2048: print("wordlist: bip_utils." + fn); return w
+            except Exception: pass
+    except Exception as e:
+        print("bip_utils:", e)
+    try:
+        from mnemonic import Mnemonic
+        w = Mnemonic("english").wordlist
+        if len(w) == 2048: print("wordlist: mnemonic"); return w
+    except Exception as e:
+        print("mnemonic:", e)
+    try:
+        sys.path.insert(0, D)
+        import aoi
+        for name in dir(aoi):
+            v = getattr(aoi, name)
+            if isinstance(v, (list, tuple)) and len(v) == 2048:
+                print("wordlist: aoi." + name); return list(v)
+            if isinstance(v, str) and "abandon" in v and len(v.split()) == 2048:
+                print("wordlist: aoi." + name); return v.split()
+    except Exception as e:
+        print("aoi:", e)
+    raise SystemExit("no wordlist source found")
+WORDS = _load_words()
 print("wordlist:", len(WORDS))
 assert len(WORDS) == 2048, len(WORDS)
 def entropy_to_seed(ent):
