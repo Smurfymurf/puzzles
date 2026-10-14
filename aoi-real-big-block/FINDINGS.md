@@ -46,3 +46,14 @@ CHAPTER REPLICATES THE DEVICE 3x (I + FFWW, last letters s t n m): 0-based 3-7, 
 CRACK: the sign-set is defined against the Finney post, not the chapter. Using
 {I,T,A,S,M} on a 273-para chapter is an ASSUMPTION (already shown underdetermined on
 Stage One). Prime suspect for the remaining twist.
+
+## X IS DEAD — para-77 pid is a duplicate-p-id artefact (2026-10-14)
+Reproduced locally: md5('"What?"') = 184826be0ea6837abb5851807f7a9e2b and
+md5('184826be0ea6837abb5851807f7a9e2b' + '1') = 8b71bade9685d3388452bc4755b06a0d = the
+stored pid of 0-based para 77. Para 77 is the SECOND occurrence of '"What?"' (first is
+0-based 33). Wattpad stamps nth duplicates as md5(hex(md5(text)) + n), n from 1 - which
+matches our own NEGATIVES A1 observation that duplicated paragraphs carry different pids.
+=> para 77 was never edited; the "missing sentence X" theory is DEAD.
+=> the hashed text contains '"What?"'. Retire X leads: old B6-B14, x_what2, x12b, xbrute,
+   xcrack, p77pid, para77 splice, pidphrase, hunt_x*.
+Source: diginen43 comment 2026-10-13 (r/Grycoin/cgkpbb); independently reproduced here.
