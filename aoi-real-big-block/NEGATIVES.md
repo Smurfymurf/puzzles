@@ -79,3 +79,6 @@ D2. K=4 of D1 | 1.9e8
 D3. 2-character edits at ALL positions (not just boundaries), one base | ~2e9
 D4. para 77 pid preimage, >4-word phrases / different vocab | open
 D5. Ask the Block 76 solver for the serialisation convention of a final Aoi block | free
+
+- para77.py - 611,137 candidates (every 1- and 2-char edit of para 77 plus case/quote/punct/whitespace variants) spliced into the certified CRLFCRLF base and tested against BOTH escrows. 0 hits, 859.5s at 711/s. Closes the para-77 text axis.
+- p77pid.py - 171 md5 variants of the para-77 text (all case combos, straight/curly/entity quotes, lead+trail tab/CR/LF/CRLF/NBSP/ZWSP/thin/narrow space, doubled spaces, escaped quotes, p-tag wrappers). None equals stored pid 8b71bade. Sanity md5('"What?"')=184826be reproduced. Stored bytes are neither a whitespace nor a case variant, so either an invisible codepoint outside the set or a stale pid from a longer pre-edit string. Para 77 reclassified as bookkeeping, deprioritised.
