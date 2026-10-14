@@ -316,3 +316,4 @@ PARALLEL FREE WORK
 STATUS: sign3 (544 sign positions, 2.68e7) run on crlf2. NEXT = pidpre.py (steps 1-3 above).
 ### [2026-10-14] sign3 crlf2 (<=3 toggles x 544 sign positions, 26,831,984) -> 0 clean negative. NEXT = pidpre pid-oracle route
 ### [2026-10-14] pidpre tmpl (40,255,488) -> 0 ; edit<=2 from 3 bases -> 0. Dump still pending.
+### [2026-10-14] dump: para 77 RAW=STRIP=UNESC="What?" (no tags/entities); md5=184826be... != pid 8b71bade... . Genuine in-place author edit; pid fingerprints the ORIGINAL text. No artifact.
